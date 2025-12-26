@@ -1,4 +1,4 @@
-from discord_webhook import DiscordWebhook
+from discord_webhook import AsyncDiscordWebhook, DiscordWebhook
 
 
 class DiscordClient:
@@ -11,8 +11,7 @@ class DiscordClient:
         Args:
             message (str): The message to send.
         """
-        webhook = DiscordWebhook(url=self.webhook_url)
-        webhook.add_content(message)
+        webhook = DiscordWebhook(url=self.webhook_url, content=message)
         webhook.execute()
 
     async def send_message_async(self, message: str) -> None:
@@ -21,6 +20,5 @@ class DiscordClient:
         Args:
             message (str): The message to send.
         """
-        webhook = DiscordWebhook(url=self.webhook_url)
-        webhook.add_content(message)
-        await webhook.execute_async()
+        webhook = AsyncDiscordWebhook(url=self.webhook_url, content=message)
+        await webhook.execute()
