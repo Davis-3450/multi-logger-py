@@ -1,9 +1,18 @@
 [project]
 name = "multi-logger"
 version = "0.1.0"
-description = "A flexible logger based on loguru with multiple notification clients."
+description = "A flexible logger based on loguru with multiple notification clients (Discord, Telegram)"
 readme = "README.md"
-requires-python = ">=3.13"
+license = "MIT"
+keywords = [
+    "logger",
+    "logging",
+    "loguru",
+    "discord",
+    "telegram",
+    "notifications",
+    "multi-channel",
+]
 dependencies = ["discord-webhook>=1.4.1", "httpx>=0.28.1", "loguru>=0.7.3"]
 
 [dependency-groups]
