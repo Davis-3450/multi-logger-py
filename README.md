@@ -1,6 +1,6 @@
 # multi-logger
 
-A flexible logger based on loguru
+A flexible logger based on loguru with multiple notification clients (Discord, Telegram)
 
 ## Tests
 
